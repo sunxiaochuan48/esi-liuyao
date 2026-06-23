@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>ESI-LIUYAO — 理性六爻预测框架</title>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true,theme:'base',themeVariables:{primaryColor:'#ffffff',primaryTextColor:'#002FA7',primaryBorderColor:'#002FA7',lineColor:'#002FA7',fontFamily:'"Noto Sans SC",sans-serif',fontSize:'15px',primaryBorderWidth:3}})</script>
+<title>ESI-LIUYAO — 六爻从起卦到解读的全流程系统</title>
 <style>
 /* =============================================================
     ESI-LIUYAO Landing v3
@@ -395,23 +393,6 @@ section{padding:var(--g-3xl) 24px;display:flex;flex-direction:column;align-items
   }
 }
 
-/* ── Mermaid flowchart ── */
-.mermaid .node :where(text, tspan, .label, .nodeLabel, span) {
-  font-weight: 700 !important;
-}
-.mermaid .node:hover :where(rect, .label-container) {
-  fill: #002FA7 !important;
-  stroke: #ffffff !important;
-  stroke-width: 3px !important;
-  transition: fill .2s, stroke .2s, stroke-width .2s;
-}
-.mermaid .node:hover :where(text, tspan, .label, .nodeLabel, span) {
-  fill: #ffffff !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  transition: fill .2s, color .2s, font-weight .2s;
-}
-
 /* ════════════════════════════════════════════════════════════
    PILLARS
    ════════════════════════════════════════════════════════════ */
@@ -567,6 +548,22 @@ footer p{font-size:14px;line-height:1.7}
   .prod-panel{padding:28px 20px}
 }
 
+/* ── VERSION CARDS (左右并排) ── */
+.version-cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+.version-card {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 860px) {
+  .version-cards {
+    flex-direction: column;
+  }
+}
+
 @media print{
   nav{display:none}
   body{background:#fff;color:#000;font-size:13px}
@@ -626,7 +623,7 @@ footer p{font-size:14px;line-height:1.7}
     <div class="reveal">
       <h2 class="g-title">如何<em>使用</em></h2>
       <div class="g-body">
-        <p>这是基于 <span class="hl">Reasonix</span> 制作的 Skill，若在其他平台上使用可能出现兼容性问题。可以尝试附带文件并发送指令，对内容进行针对平台的的适应性修改。</p>
+        <p>这是一个六爻从起卦到解读全流程的Skill项目，基于 <span class="hl">Reasonix</span> 制作，若在其他平台上使用可能出现兼容性问题。可以尝试附带文件并发送指令，对内容进行针对平台的的适应性修改。</p>
         <p><a href="https://reasonix.io" target="_blank" rel="noopener noreferrer" style="font-weight:700;color:var(--accent);text-decoration:none">Reasonix官网入口←</a></p>
         <p>使用时只需发送如下指令即可：</p>
         <div class="g-cmd">
@@ -652,7 +649,7 @@ footer p{font-size:14px;line-height:1.7}
 	      </div>
 	      <h2 class="g-title" style="margin-top:20px">如何<em>做到</em></h2>
 	      <div class="g-body">
-	        <p>我们做了很多构思，请往下看 ↓</p>
+	        <p>我们做了一些构思，请往下看 ↓</p>
 	      </div>
 	    </div>
 
@@ -664,24 +661,6 @@ footer p{font-size:14px;line-height:1.7}
      ════════════════════════════════════════════════════════════ -->
 <section id="c" data-od-id="philosophy">
   <div class="c-inner">
-
-    <div class="c-head">
-      <div>
-        <div class="c-label">Deconstruction</div>
-        <h2 class="c-title">将占卜<em>解构</em></h2>
-      </div>
-    </div>
-
-    <div class="mermaid reveal" style="display:flex;justify-content:center;margin-bottom:48px">
-      graph LR
-        发念-->匹配中
-        起卦-->匹配中
-        匹配中-->最优准确性
-        匹配中-->最优可能性
-        最优准确性-->匹配完成
-        最优可能性-->匹配完成
-        匹配完成-->结果反馈
-    </div>
 
     <!-- 标题区 -->
     <div class="c-head">
@@ -698,14 +677,14 @@ footer p{font-size:14px;line-height:1.7}
       <div class="c-card reveal">
         <div class="c-card-letter">01</div>
         <h3>Emperical · 实证</h3>
-        <p>实践为证，每一条论断都经过评分验证。不做模糊正确的预测，只交付可度量的结果。</p>
+        <p>实践为证，不做理论与精神上的"巨人"，优先以实践建立认知并以此为方针。从现象中得到的稳定反馈，比"理论正确"和"道路正确"更重要。</p>
       </div>
 
       <!-- 卡片 2 -->
       <div class="c-card reveal" style="animation-delay:.1s">
         <div class="c-card-letter">02</div>
         <h3>Systematic · 系统</h3>
-        <p>覆盖出题、解读、评分、记录全流程。符号排列组合后，系统性逼近真实世界的答案。</p>
+        <p>让AI按照自己的度量衡来进行猜想，远不如建立一套系统的架构，让每一句判断都能追溯到源头，让解读变成一个又一个可编辑优化的结构。</p>
       </div>
 
       <!-- 卡片 3 -->
@@ -719,8 +698,7 @@ footer p{font-size:14px;line-height:1.7}
 
     <!-- 训练反馈循环 -->
     <div class="c-label" style="margin-top:48px">Pipeline</div>
-    <h2 class="c-title" style="margin-bottom:4px;">训练<em>反馈</em>循环</h2>
-    <p class="pipeline-desc">从问题到答案，五次接力完成一次完整的训练闭环。</p>
+    <h2 class="c-title" style="margin-bottom:48px;">训练<em>反馈</em>循环</h2>
     <div class="pipeline-flow reveal" style="animation-delay:.2s">
       <div class="pipeline-node">
         <div class="pipeline-num">1</div>
@@ -785,9 +763,10 @@ footer p{font-size:14px;line-height:1.7}
     <!-- 详情面板容器 -->
     <div class="prod-detail-wrap" id="detailWrap"></div>
 
-    <div class="reveal" style="animation-delay:.2s;text-align:center;margin-top:32px;font-size:15px;color:var(--muted);line-height:1.7;" id="prodNote">
+    <div class="version-cards reveal" style="animation-delay:.2s">
+      <div class="version-card" id="prodNote"></div>
+      <div class="version-card" id="pointsWrap"></div>
     </div>
-    <div style="margin-top:32px;" id="pointsWrap"></div>
   </div>
 </section>
 
@@ -797,7 +776,6 @@ footer p{font-size:14px;line-height:1.7}
 <section id="sponsor" data-od-id="sponsor">
   <div class="section-inner">
     <div class="sponsor-wrap">
-      <p class="section-number">赞助</p>
       <h2 class="section-title">关于打赏</h2>
       <p>如果您看好本项目的潜力<br>或者觉得它对您有帮助，欢迎支持我们</p>
       <div class="sponsor-qr" id="qrGrid" aria-label="赞助二维码"></div>
@@ -813,9 +791,9 @@ footer p{font-size:14px;line-height:1.7}
      ════════════════════════════════════════════════════════════ -->
 <footer data-od-id="footer">
   <div class="f-brand">ESI-<span>LIUYAO</span></div>
-  <p>基于 Reasonix 的理性六爻预测框架</p>
+  <p>基于 Reasonix 的六爻从起卦到解读的全流程系统</p>
   <div class="f-div"></div>
-  <p>用数据迭代逼近准确 · Created by sunxiaochuan48</p>
+  <p>Created by sunxiaochuan48 · <a href="https://github.com/sunxiaochuan48/esi-liuyao" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">GitHub</a></p>
 </footer>
 
 <!-- ════════════════════════════════════════════════════════════
@@ -836,7 +814,7 @@ var VERSIONS = {
         downloadUrl:'https://raw.githubusercontent.com/sunxiaochuan48/esi-liuyao/refs/heads/main/sklls/esi-liuyao-v1.0.2.md',
         anchors:[[1,85],[2,100],[3,87],[4,69],[5,69],[6,54],[7,68],[8,93],[9,90],[10,93],[11,37],[12,81],[13,94],[14,49],[15,67],[16,40],[17,74],[18,69],[19,93],[20,71],[21,80],[22,55],[23,87],[24,74],[25,71],[26,90],[27,95],[28,67],[29,63],[30,87],[31,9],[32,90],[33,23],[34,73],[35,54],[36,30],[37,89],[38,50],[39,64],[40,27],[41,76],[42,70],[43,53],[44,44],[45,80],[46,70],[47,87],[48,80],[49,76],[50,73]],
         dl:'获取当前 Skill',
-        note:'这是最初的版本，69%的参考正确率，粗糙的结构与内容。它初步的表明了该项目拥有一定的可行性，在实测观察中它能够真实的反映现实情况。\n\n在杜绝巴纳姆效应与宽泛描述，并其明确行为准则后，它仍旧可以通过解读得出与现实相近的结论。尽管有的时候结论可能会出现错误，但经过分析我们发现，大部分问题实际上都是出现在解读环节的错误与偏差，以及结构或AI执行层面的问题。\n\n在拒绝宽泛描述的情况下，能够反映一定的现实情况，这是一件有意义的事情。而因为测试题数体量原因，我们无法对"反映现实"这一特质进行盖棺定论，但也无法全然的，将它否定为抛硬币游戏。这至少给了我们一个前进的理由。我们会以此为基准，不断训练发展，吸收反馈，优化结构内容。',
+        note:'这是最初的版本，69%的参考正确率，粗糙的结构与内容。它初步的表明了该项目拥有一定的可行性，在实测观察中它能够真实的反映现实情况。\n\n在杜绝巴纳姆效应并明确准则后，它仍能通过解读得出贴近现实的结论。尽管结论偶有错误，但分析表明，多数问题源于解读偏差及结构或执行层面的缺陷。\n\n在拒绝宽泛描述后，能够反映现实，这本身是有意义的。虽因测试体量不足无法进行定论，但也不能将其单纯否定为抛硬币游戏。这给了我们前进的理由，我们将以此为基准继续发展。',
         points:['新增多个时间获取方式，建立从时间到四柱的计算流程','新增三种起卦方式','新增六爻纳甲排盘功能','新增五项检查（用神上卦/旬空/月破/特殊卦型/世爻关系）','新增10种问题模式，每种都有独立用神选取和断语框架','新增规划A-E五个阶段用于解读与判断','新增审计/自评/反模式检测等功能','新增双层输出模式，对内输出完整Ai结构化信息，对外输出人话版','新增多个高级推理工具','新增多个速查表']
       },
       {
@@ -848,7 +826,7 @@ var VERSIONS = {
         downloadUrl:'https://raw.githubusercontent.com/sunxiaochuan48/esi-liuyao/refs/heads/main/sklls/esi-liuyao-v1.1.md',
         anchors:[[1,80],[2,70],[3,64],[4,84],[5,76],[6,56],[7,80],[8,77],[9,72],[10,92],[11,56],[12,72],[13,68],[14,64],[15,70],[16,100],[17,80],[18,80],[19,84],[20,80],[21,100],[22,72],[23,40],[24,76],[25,84],[26,68],[27,10],[28,87],[29,90],[30,70],[31,55],[32,76],[33,64],[34,92],[35,80],[36,64],[37,64],[38,76],[39,80],[40,53],[41,90],[42,84],[43,92],[44,90],[45,90],[46,56],[47,24],[48,92],[49,32],[50,75]],
         dl:'获取当前 Skill',
-        note:'<strong>v1.1</strong> 尚未推出，敬请期待。',
+        note:'本次更新主要对上一版本进行了一定程度的梳理与结构优化，这带来了3%正确率的提升。苦于时间与经费原因，我们的测试量依旧没有变化，虽然整体呈现逐渐收敛的状态，但按照预估，这依然可能带来大约±1~2%的误差。\n\n测试中我们发现单文件架构的局限，在下个版本或将彻底重构。这是对于V2系列的设想，称其为"机关"，届时V1系列将作为废弃路线，不再更新。\n\n考虑到网页服务或C端用户的使用体验，后续我们会同步展开V3版本的制作，在结构规划上更加轻便与简洁，体积大幅度缩小，作为一份通用的规范来指导AI行动，我称其为"预制菜"。',
         points:['重构断判定量体系，废弃固定权重+综合分模式，替换为原子问题独立计分+六亲生克传导修正','新增信号多义性裁决，月破/旬空/伏藏强制多方向解读+场景匹配，防单向过读','新增质量闸门，C→D 间插入溯因推理，拦截逻辑断层','新增信号定位，六维收窄锁定何人/何事/何状，断语绑定实体锚点','重构起卦算法，升级为熵池+XorShift32','新增完整四柱计算代码PowerShell可直接执行','新增审计5项+反模式8条，全部对齐新增流程','精简E阶段从核心裁定降为断语包装']
       },
     ]
@@ -921,15 +899,18 @@ function downloadSkill(url){
   var detailWrap = document.getElementById('detailWrap');
   var prodNote = document.getElementById('prodNote');
   var currentLine = 'v1';
-  var currentVer = 'v1_0';
+  var currentVer = 'v1_1';
 
   function renderVersions(lineKey){
     var line = VERSIONS[lineKey];
-    verTabs.innerHTML = line.versions.map(function(v,i){
-      var active = i === 0 ? ' active' : '';
+    // 若 currentVer 不在当前线路中，回退到第一个版本
+    if (!line.versions.find(function(v){return v.id === currentVer})) {
+      currentVer = line.versions[0].id;
+    }
+    verTabs.innerHTML = line.versions.map(function(v){
+      var active = v.id === currentVer ? ' active' : '';
       return '<button class="ver-tab'+active+'" data-ver="'+v.id+'">'+v.label+'</button>';
     }).join('');
-    currentVer = line.versions[0].id;
     renderDetail(lineKey, currentVer);
     verTabs.classList.remove('animate');
     requestAnimationFrame(function(){verTabs.classList.add('animate')});
@@ -1029,23 +1010,28 @@ function downloadSkill(url){
       +chartHtml
       +'<a href="javascript:void(0)" class="pp-dl"'+(ver.downloadUrl?' onclick="downloadSkill(\''+ver.downloadUrl+'\')"':'')+'>'+ver.dl+'</a>'
       +'</div>';
-	    prodNote.innerHTML = '<div class="points-panel">'
-	      + '<div class="points-header">版本简介</div>'
-	      + '<div class="points-item" style="border-bottom:none;justify-content:center;padding:16px 32px">'
-	      + '<div class="points-text" style="color:var(--fg);text-align:center;font-size:15px;line-height:1.75">'
-	      + (ver.note||'').split('\n\n').map(function(p){return '<p style="margin-bottom:10px;line-height:1.75">'+p.replace(/\n/g,'<br>')+'</p>'}).join('')
-	      + '</div>'
-	      + '</div>'
-	      + '</div>';
-    // 渲染版本要点
-    var pointsHtml = '<div class="points-panel">'
-      + '<div class="points-header">版本要点</div>'
-      + '<div class="points-list">';
-    (ver.points || ['无']).forEach(function(p,i){
-      pointsHtml += '<div class="points-item"><span class="points-text">'+p+'</span></div>';
-    });
-    pointsHtml += '</div></div>';
-    document.getElementById('pointsWrap').innerHTML = pointsHtml;
+		    // 版本介绍（完整显示，超出滚动）
+		    prodNote.innerHTML = '<div class="points-panel">'
+		      + '<div class="points-header">版本介绍</div>'
+		      + '<div class="points-list">'
+		      + (ver.note||'暂无介绍').split('\n\n').map(function(p){
+		        return '<div class="points-item" style="justify-content:center">'
+		          + '<div class="points-text" style="text-align:center;font-size:14px;line-height:1.75">'
+		          + '<p style="margin-bottom:0;line-height:1.75">' + p.replace(/\n/g,'<br>') + '</p>'
+		          + '</div>'
+		          + '</div>';
+		      }).join('')
+		      + '</div>'
+		      + '</div>';
+		    // 版本要点（全部列出，超出滚动）
+		    var pointsHtml = '<div class="points-panel">'
+		      + '<div class="points-header">版本要点</div>'
+		      + '<div class="points-list">';
+		    (ver.points || ['无']).forEach(function(p){
+		      pointsHtml += '<div class="points-item"><span class="points-text" style="font-size:14px;line-height:1.75">'+p+'</span></div>';
+		    });
+		    pointsHtml += '</div></div>';
+		    document.getElementById('pointsWrap').innerHTML = pointsHtml;
   }
 
   // line tab click
