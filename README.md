@@ -1,5 +1,7 @@
 # esi-liuyao · 六爻预测引擎
 
+---
+
 [![Version](https://img.shields.io/badge/version-v1.1-333)](https://github.com)
 [![Platform](https://img.shields.io/badge/platform-ZCode%20%7C%20Codex%20%7C%20Claude-blue)](#跨平台)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
