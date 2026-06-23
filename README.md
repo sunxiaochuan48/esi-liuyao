@@ -1,7 +1,5 @@
 # esi-liuyao · 六爻预测引擎
 
----
-
 [![Version](https://img.shields.io/badge/version-v1.1-333)](https://github.com)
 [![Platform](https://img.shields.io/badge/platform-ZCode%20%7C%20Codex%20%7C%20Claude-blue)](#跨平台)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -13,8 +11,6 @@
 **esi-liuyao** 是一个以六爻符号体系为基础，从起卦、排盘、到多阶段分析、最终给出明确结论的全流程系统。
 
 我们不提供迷信服务，我们探究的是：符号经过排列组合后能否真实的反映现实。因此，六爻符号体系只是我们在权衡后的一个选择，一个实验载体。我们会尽可能的去除神秘化元素，并在 Skill 中对巴纳姆效应做了禁用，这会证明，它不靠话术，错就是错。
-
-### 核心原则
 
 ---
 
